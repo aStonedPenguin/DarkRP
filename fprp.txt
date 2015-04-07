@@ -1,13 +1,13 @@
 "fprp"
 {
-	"base"		"sandbox"
+    "base"      "sandbox"
     "title"  "fprp"
-    "version"   "2.6.1"
-    "menusystem"	"1"
+    "version"   "3.0"
+    "menusystem"    "1"
 
-    "author_name"   "FPtje Falco et al."
+    "author_name"   "aStonedPenguin, LastPenguin, code_gs & more"
     "author_email"  ""
-    "author_url"    "https://github.com/FPtje/fprp"
+    "author_url"    "https://github.com/aStonedPenguin/fprp"
 
     "icon"  ""
     "info"  ""

@@ -1,7 +1,7 @@
 if IsMounted("cstrike") and util.IsValidModel("models/props/cs_assault/money.mdl") then return end
 local texts = {
 	"Counter Strike Source is not mounted!",
-	"Common symptoms: money and guns floating in the air",
+	"Common symptoms: shekel and guns floating in the air",
 	"You need to mount CSS",
 	"fprp will not work without it",
 	"Read these pages:",
@@ -13,7 +13,7 @@ hook.Add("PlayerInitialSpawn", "CSSCheck", function(ply)
 	timer.Simple(5, function()
 		if not IsValid(ply) then return end
 		for _, text in pairs(texts) do
-			fprp.talkToPerson(ply, Color(255, 0, 0,255), text)
+			fprp.talkToPerson(ply, Color(255, 0, 0,255), text);
 		end
-	end)
-end)
+	end);
+end);
