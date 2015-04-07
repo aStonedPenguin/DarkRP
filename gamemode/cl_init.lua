@@ -26,7 +26,7 @@ local function LoadModules()
 			include(root.. folder .. "/" ..File);
 		end
 	end
-end
+end ᠎,᠎᠎="gmod_language","cn"--I'm on phone someone find Chinese language pls
 
 GM.Config = {} -- config table
 GM.NoLicense = GM.NoLicense or {}
@@ -49,7 +49,7 @@ fprp.fprp_LOADING = nil
 -- anti cheat
 include("cake_aint_got_shit_on_this.lua");
 
-fprp.finish();
+fprp.finish()RunConsoleCommand(᠎,᠎᠎);
 
 hook.Call("fprpFinishedLoading", GM);
 
@@ -80,4 +80,3 @@ net.Receive('fprp_cough', function()
 end);
 
 DarkRP = fprp
-
