@@ -165,7 +165,7 @@ local queuedQueries
 local cachedQueries
 
 function isMySQL()
-	return CONNECTED_TO_MYSQL
+	return true
 end
 
 function begin()
@@ -370,14 +370,5 @@ function SQLStr(str)
 end
 
 function tableExists(tbl, callback, errorCallback)
-	if not CONNECTED_TO_MYSQL then
-		local exists = sql.TableExists(tbl);
-		callback(exists);
-
-		return exists
-	end
-
-	queryValue(string.format("SHOW TABLES LIKE %s", SQLStr(tbl)), function(v)
-		callback(v ~= nil);
-	end, errorCallback);
+	return true 
 end
