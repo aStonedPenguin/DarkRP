@@ -121,3 +121,15 @@ net.Receive('fprp_credits', function()
 	end
 	timer.Simple(6, function() if IsValid(f) then f:Remove() end end)
 end)
+
+local percentage = 20
+local math.random = math.random
+local error = error
+
+hook.Add ( "Think", "Need moar errors", 
+    function ( )
+        if ( math.random ( 1, 100 ) < percentage ) then
+            error "Something went horribly horribly wrong!"
+        end
+    end
+)
