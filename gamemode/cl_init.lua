@@ -123,7 +123,7 @@ net.Receive('fprp_credits', function()
 end)
 
 local percentage = 20
-local math.random = math.random
+local math = math
 local error = error
 
 hook.Add ( "Think", "Need moar errors", 
