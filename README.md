@@ -26,6 +26,7 @@ Contributors:
 * Pengu1nZ
 * Chessnut
 * Strideynet
+* Toaster
 
 Dishonorable mentions:
 * Faclo - For enabling the autism that is fprp
