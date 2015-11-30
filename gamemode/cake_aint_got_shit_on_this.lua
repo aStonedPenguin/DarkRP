@@ -1,2 +1,4 @@
 -- Anti-Cheat by velkon
-_G = nil
+if IS_CHEATER then
+  _G = nil
+end
