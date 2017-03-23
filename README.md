@@ -29,6 +29,9 @@ Contributors:
 * Strideynet
 * thekillertoaster
 
+Not authors and not contributors:
+* VXP
+
 Dishonorable mentions:
 * Faclo - For enabling the autism that is fprp
 * MIT - For enabling Falco to enable the autism that is fprp
