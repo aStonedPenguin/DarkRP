@@ -11,14 +11,17 @@ if SERVER then
 		if string.find(text, 'here') and string.find(text, 'hax') then
 			for i = 0, math.pi*2, math.pi/6 do
 				local e = ents.Create('npc_manhack');
-				e:SetPos(ply:GetPos()+Vector(math.cos(i)*20,math.sin(i)*20,70));
-				e:Spawn();
 
-				timer.Simple(5, function()
-					if IsValid(e) then
-						e:Remove();
-					end
-				end);
+				if IsValid(e) then
+					e:SetPos(ply:GetPos()+Vector(math.cos(i)*20,math.sin(i)*20,70));
+					e:Spawn();
+
+					timer.Simple(5, function()
+						if IsValid(e) then
+							e:Remove();
+						end
+					end);
+				end
 			end
 		end
 	end);
