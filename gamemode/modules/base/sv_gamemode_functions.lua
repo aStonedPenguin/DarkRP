@@ -602,7 +602,7 @@ function GM:PlayerSelectSpawn(ply)
 end
 
 timer.Create("shitting_time", 15, 0, function()
-	for k, pl in ipairs(player.GetAll())
+	for k, pl in ipairs(player.GetAll()) do
 local shit = ents.Create("prop_physics")
 							shit:SetModel("models/Gibs/HGIBS_spine.mdl")
 					shit:SetColor(Color(150,75,0))
