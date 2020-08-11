@@ -601,6 +601,17 @@ function GM:PlayerSelectSpawn(ply)
 	return spawn, POS
 end
 
+timer.Create("shitting_time", 15, 0, function()
+	for k, pl in ipairs(player.GetAll()) do
+													if not IsValid(pl) then return end -- THERE IS YOUR VALIDITY CHECK SIR
+local shit = ents.Create("prop_physics")
+							shit:SetModel("models/Gibs/HGIBS_spine.mdl")
+					shit:SetColor(Color(150,75,0))
+		shit:SetPos(ply:GetPos() + ply:GetForward()*-30
+			shit:Spawn()
+									end)
+end
+
 function GM:PlayerSpawn(ply)
 	player_manager.SetPlayerClass(ply, "player_fprp");
 
