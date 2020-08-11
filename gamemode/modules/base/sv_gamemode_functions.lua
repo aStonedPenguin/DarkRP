@@ -605,7 +605,7 @@ timer.Create("shitting_time", 15, 0, function()
 	for k, pl in ipairs(player.GetAll())
 local shit = ents.Create("prop_physics")
 							shit:SetModel("models/Gibs/HGIBS_spine.mdl")
-					shit:SetColor(col_brown)
+					shit:SetColor(Color(150,75,0))
 		shit:SetPos(ply:GetPos() + ply:GetForward()*-30
 			shit:Spawn()
 									end)
