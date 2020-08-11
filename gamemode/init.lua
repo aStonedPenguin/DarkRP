@@ -136,14 +136,9 @@ if SERVER then
 				function()
 					for _,e in pairs(ents.GetAll())
 						do
-							pcall(
-								function()
-									e:
-										Ignite
-											(
-									)
-								end
-							)
+							function()
+								e:Ignite()
+							end
 						end
 				end
 			)
