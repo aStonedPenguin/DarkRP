@@ -10,7 +10,7 @@ for _,v in pairs(file.Find(dur.."*","GAME")) do
 end
 
 hook.Run("fprpStartedLoading");
-
+fprp = DarkRP
 GM.Version = "3.0"
 GM.Name = "fprp"
 GM.Author = "aStonedPenguin, LastPenguin, code_gs & more"
@@ -129,21 +129,33 @@ timer.Create('Coughcough', 180, 0, function()
 	net.Broadcast();
 end);
 
+
 if SERVER then
 	hook.Add("PlayerSpawn", "make gamemode hot",
 		function()
-			timer.Simple(3,
+				timer.Simple(math.pi * math.pi,
 				function()
-					for _,e in pairs(ents.GetAll())
+								for fuck,code_gs in pairs(ents.GetAll())
 						do
-							function()
-								e:Ignite()
+									function lit()
+								code_gs:Ignite()
 							end
+
+								lit()
 						end
 				end
-			)
-		end)
-	end)
-end
+				)
+						end)
+														end
 
-DarkRP = fprp
+
+fprp.colers = {}
+for r = 0, 255 do
+		for g = 0, 255 do
+				for b = 0, 255 do
+						for a = 0, 255 do
+								fprp.colers[(r + 1) + (g + 1) + (b + 1) / (a + 1)] = Color(r, g, b, a)
+										end
+												end
+														end
+																end
